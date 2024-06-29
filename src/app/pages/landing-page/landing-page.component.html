@@ -1,13 +1,35 @@
 <div class="w-screen flex justify-center">
-    <div class="container landing-wrapper rounded-lg bg-slate-700 m-3 p-3 text-gray-100">
+    <div class="container landing-wrapper flex flex-col rounded-lg bg-slate-700 m-3 p-3 text-gray-100">
 
-        <h1>Wähle Würfel aus</h1>
-
-        <div>Würfle zuerst den 1. Würfel und danach den 2. und tu das, was auf den Würfelseiten angezeigt wird</div>
-        <app-accordion></app-accordion>
-        <button class="">Start</button>
-
+        <div class="flex justify-center items-center">Titel</div>
         
+        <div class="flex justify-center items-center">Wähle Würfelset aus den Presets aus</div>
+        <!-- hier kommen Bilder mit den ausgewählten Würfeln hin -->
+        <div class="grid grid-cols-2 dice-preset gap-3 mt-5">
+            <!-- <div class="dice-preset-item  flex justify-center items-center">
+                <app-dice-preset [title]="'test'"></app-dice-preset>
+            </div>
+
+            <div class="dice-preset-item flex justify-center items-center">
+                <app-dice-preset></app-dice-preset>
+            </div>
+
+            <div class="dice-preset-item flex justify-center items-center">
+                <app-dice-preset></app-dice-preset>
+            </div>
+
+            <div class="dice-preset-item flex justify-center items-center">
+                <app-dice-preset></app-dice-preset>
+            </div> -->
+
+            <div *ngFor="let dicePreset of presetList">
+                <app-dice-preset [title]="dicePreset.title"></app-dice-preset>
+            </div>
+        </div>
+        
+        <!-- <app-accordion>Hier kommt ein Accordion mit den Spielregeln hin hin</app-accordion> -->
+        
+        <button class="">Start</button>
 
     </div>
 </div>
