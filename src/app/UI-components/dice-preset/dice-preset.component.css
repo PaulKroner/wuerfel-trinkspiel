@@ -1,0 +1,6 @@
+.preset-img {
+    object-fit: contain; /* oder 'cover', je nachdem was du bevorzugst */
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
