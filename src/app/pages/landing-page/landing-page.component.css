@@ -1,3 +1,7 @@
 .landing-wrapper {
-  height: 88vh;
+  height: 97vh;
+}
+
+.headline {
+  font-size: 2.7rem;
 }

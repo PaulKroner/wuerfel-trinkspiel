@@ -4,16 +4,18 @@ import { AccordionComponent } from '../../UI-components/accordion/accordion.comp
 import { DicePresetComponent } from '../../UI-components/dice-preset/dice-preset.component';
 import { DicePresetInterface } from '../../services/interfaces/dicepreset';
 import { DicePresetService } from '../../services/dice-preset-service.service';
+import { TooltipComponent } from '../../UI-components/tooltip/tooltip.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, AccordionComponent, DicePresetComponent],
+  imports: [CommonModule, AccordionComponent, DicePresetComponent, TooltipComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
   presetList: DicePresetInterface[] = [];
+  text = "Wie wird gespielt?";
 
   constructor(private dicePresetService: DicePresetService) {}
 
