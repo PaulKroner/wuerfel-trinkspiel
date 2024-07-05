@@ -1,13 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tooltip',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.css'
 })
 export class TooltipComponent {
+  showModal = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
 
   @Input() text: string = "";
 }
