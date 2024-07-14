@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './dice.component.css'
 })
 export class DiceComponent {
-
+  ImagePath: string;
+  
+  constructor() {
+    this.ImagePath = "./assets/dice-six-faces-four.png"
+  }
 }
