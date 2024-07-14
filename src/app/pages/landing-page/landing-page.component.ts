@@ -12,7 +12,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, AccordionComponent, DicePresetComponent, TooltipComponent, ModalComponent, RouterOutlet],
+  imports: [CommonModule, AccordionComponent, DicePresetComponent, TooltipComponent, ModalComponent, RouterOutlet, RouterLink],
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
@@ -27,6 +27,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   navigateToGame(): void {
-    this.router.navigate(['/gamescreen']);
+    this.router.navigate(['gamescreen']);
   }
 }

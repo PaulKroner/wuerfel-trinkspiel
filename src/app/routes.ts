@@ -6,12 +6,10 @@ const routeConfig: Routes = [
     {
         path: "",
         component: LandingPageComponent,
-        title: "Home page",
     },
     {
         path: "gamescreen",
         component: GameScreenComponent,
-        title: "GameScreen",
     }
 ];
 
