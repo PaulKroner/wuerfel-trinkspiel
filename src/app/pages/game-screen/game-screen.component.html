@@ -7,17 +7,17 @@
             <div class="flex flex-col justify-evenly w-full h-full">
 
                 <div class="flex justify-center">
-                    <app-dice></app-dice>
+                    <app-dice [dice_id]="1" (rolled)="onDiceRolled()"></app-dice>
                 </div>
                 <div class="flex justify-center">
-                    <app-dice></app-dice>
+                    <app-dice [dice_id]="2" (rolled)="onDiceRolled()"></app-dice>
                 </div>
             </div>
 
         </div>
 
-        <div class="flex justify-center items-center">
-            <button class="bg-blue-500 text-white py-2 px-4 rounded-full w-64 h-16 text-5xl font-semibold shadow-lg shadow-neutral-500">Nächster</button>
+        <div *ngIf="allRolled" class="flex justify-center items-center">
+            <button (click)="enableAllDice()" class="bg-blue-500 text-white py-2 px-4 rounded-full w-64 h-16 text-5xl font-semibold shadow-lg shadow-neutral-500">Nächster</button>
         </div>
 
         <div class="flex justify-center items-center text-base mt-4">
